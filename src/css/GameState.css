@@ -1,0 +1,216 @@
+.game-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.game-container{
+    width: 25%;
+    margin: auto;
+}
+.game-container button{
+    width: 30px;
+    height: 30px;
+    box-shadow: 1px 2px 1px 2px #1F3641;
+}
+.turn p{
+        font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    /* Silver */
+
+    color: #A8BFC9;
+}
+.turn{
+    width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #1F3641;
+    box-shadow: inset 0px -4px 0px #10212A;
+    border-radius: 10px;
+    height: 50px;
+}
+.turn>*{
+    display: inline-block;
+}
+.turn > .x-mark::before{
+    background: #A8BFC9;
+    left: 0;
+}
+.turn > .x-mark::after{
+    background: #A8BFC9;
+    left: 0;
+}
+.turn > .o-mark{
+    border : 5px solid #A8BFC9;
+}
+.turn > div:first-child{
+    width: 20px;
+    height: 20px;
+    
+}
+.reset-btn img{
+    width: 10px;
+    height: 10px;
+}
+.cell{
+    width: 100px;
+    height: 100px;
+    background-color: #1F3641;
+    border-radius: 10px;
+    box-shadow: inset 0px -8px 0px #10212A;
+}
+.game-board{
+    display: flex;
+    height: 350px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.myScore{
+    background: #31C3BD;
+}
+.tie{
+    background: #A8BFC9;
+}
+.opponentScore{
+    background: #F2B137;
+}
+.score-container >*{
+    border-radius: 10px;
+    width: 110px;
+    height: 50px;
+}
+.score-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.score-container p{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: small;
+   
+}
+.result-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100vw;
+    left:0;
+    top:0px;
+    height: 100vh;
+    visibility: hidden;
+    z-index: 99;
+}
+.final-result{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top:200px;
+    height: 200px;
+    width: 100vw;
+    background-color: rgba(31, 54, 65, 0.9);
+}
+.final-result p{
+        font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+
+}
+.o-win{
+    color: #F2B137;
+}
+.x-win{
+    color: #31C3BD;
+}
+.result-container button{
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    text-transform: uppercase;
+    margin: 0 5px;
+}
+.quit-btn{
+    background: #A8BFC9;
+}
+.cont-btn{
+    background: #F2B137;
+}
+.show-result{
+    visibility: visible;
+}
+.result{
+    display: flex;
+    width: 30%;
+    height: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.result > p{
+    font-size: xx-large;
+}
+.result > div:first-child{
+    width: 50px;
+    height: 50px;
+}
+.result > .o-mark{
+    border:15px solid #F2B137;
+}
+.played>*{
+    width: 60px;
+    height: 60px;
+    margin: 15px auto;
+}
+.x-mark{
+    box-sizing: border-box;
+}
+.win .o-mark{
+    border: 10px solid #1F3641;
+
+}
+.win-x{
+    background: #31C3BD;;
+}
+.win-o{
+    background: #F2B137;
+}
+.win .x-mark::before{
+    background: #1F3641;
+    
+}
+.win .x-mark::after{
+    background: #1F3641;
+}
+@media only screen and (max-width : 375px) {
+    .game-container{
+        width: 80%  ;
+    }
+    .game-board{
+        height: 300px;
+    }
+    .cell{
+        width: 90px;
+        height: 90px;
+    }
+    .score-container > div{
+        width: 90px;
+    }
+    .result >p{
+        font-size: medium;
+    }
+    .result{
+        width: 90%;
+    }
+}
